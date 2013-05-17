@@ -30,17 +30,6 @@ namespace RestApi
         /// </summary>
         /// <param name="user">the username of the user</param>
         /// <returns>list of accounts</returns>
-        public static List<Account> GetAccountList( string user )
-        {
-            string requestString = s_apiServer + "users/" + user + "/accounts";
-            string responseString = MakeRequest(requestString);
-            
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            List<Account> accounts;
-            accounts = serializer.Deserialize<List<Account>>( responseString );
-
-            return accounts;
-        }
 
         /// <summary>
         /// Gets the list of open trades for a given account
