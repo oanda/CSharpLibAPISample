@@ -159,7 +159,7 @@ namespace RestApi
         /// <returns>list of candles up to the present</returns>
         public static List<Candle> GetCandles(string curPair)
         {
-            string requestString = s_apiServer + "v1/" + "instruments/" + curPair + "/candles?granularity=H1";
+            string requestString = s_apiServer + "v1/history?instruments=" + curPair + "granularity=H1";
             
             string responseString = MakeRequest(requestString);
 
@@ -227,7 +227,7 @@ namespace RestApi
         /// <returns>The list of prices</returns>
         public static List<Price> GetRates( List<Instrument> instruments )
         {
-            var requestBuilder = new StringBuilder(s_apiServer + "v1/instruments/price?instruments=");
+            var requestBuilder = new StringBuilder(s_apiServer + "v1/quote?instruments=");
 
             foreach ( var instrument in instruments )
             {
