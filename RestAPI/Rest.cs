@@ -172,18 +172,18 @@ namespace RestApi
         }
 
         /// <summary>
-        /// Execute a trade on the given account using the given parameters
+        /// Execute a marketOrder on the given account using the given parameters
         /// </summary>
         /// <param name="account">the ID of the account to use</param>
         /// <param name="requestParams">dictionary of parameters for the request key=Name, value=Value</param>
-        public static void PostTrade( int account, Dictionary<string, string> requestParams )
+        public static void PostMarketOrder( int account, Dictionary<string, string> requestParams )
         {
-            string requestString = s_apiServer + "accounts/" + account + "/trades?";
+            string requestString = s_apiServer + "accounts/" + account + "/orders?";
             foreach ( var pair in requestParams )
             {
                 requestString += pair.Key + "=" + pair.Value + "&";
             }
-            requestString = requestString.Trim( '&' );
+            requestString += "type = 'market'"
             var request = WebRequest.CreateHttp( requestString );
             request.Method = "POST";
 
