@@ -20,7 +20,7 @@ namespace RestApi.DataTypes
         [DisplayName("Units")]
         public long units { get; set; }
         [DisplayName("Time")]
-        public long time { get; set; }
+        public long DateTime { get; set; }
         [DisplayName("Price")]
         public double price { get; set; }
         [DisplayName("Balance")]

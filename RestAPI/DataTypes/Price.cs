@@ -9,7 +9,7 @@ namespace RestApi.DataTypes
     public class Price
     {
         public string instrument { get; set; }
-        public double time;
+        public DateTime time;
         public double bid { get; set; }
         public double ask { get; set; }
     }
