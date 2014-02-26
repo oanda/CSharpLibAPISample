@@ -13,12 +13,12 @@ namespace RestApi.DataTypes
         public int id { get; set; }
         [DisplayName("Units")]
         public int units { get; set; }
-        [DisplayName("Direction")]
-        public string direction { get; set; }
+        [DisplayName("Side")]
+        public string side { get; set; }
         [DisplayName("Instrument")]
         public string instrument { get; set; }
         [DisplayName("Time")]
-        public long time { get; set; }
+        public DateTime time { get; set; }
         [DisplayName("Price")]
         public double price { get; set; }
         [DisplayName("Take Profit")]

@@ -8,7 +8,7 @@ namespace RestApi.DataTypes
 {
     public class Candle
     {
-        public double time { get; set; }
+        public DateTime time { get; set; }
         public double openMid { get; set; }
         public double highMid { get; set; }
         public double lowMid { get; set; }
