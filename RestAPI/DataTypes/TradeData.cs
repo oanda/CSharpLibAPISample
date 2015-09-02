@@ -10,7 +10,7 @@ namespace RestApi.DataTypes
     public class TradeData
     {
         [DisplayName("ID")]
-        public int id { get; set; }
+        public long id { get; set; }
         [DisplayName("Units")]
         public int units { get; set; }
         [DisplayName("Side")]
