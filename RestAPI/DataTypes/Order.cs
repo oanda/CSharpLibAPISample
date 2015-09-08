@@ -10,7 +10,7 @@ namespace RestApi.DataTypes
     public class Order
     {
         [DisplayName("ID")]
-        public int id { get; set; }
+        public long id { get; set; }
         [DisplayName("Type")]
         public string type { get; set; }
         [DisplayName("Side")]

@@ -10,7 +10,7 @@ namespace RestApi.DataTypes
     public class Transaction
     {
         [DisplayName("ID")]
-        public int id { get; set; }
+        public long id { get; set; }
         [DisplayName("Account")]
         public int accountId { get; set; }
         [DisplayName("Type")]
@@ -44,11 +44,11 @@ namespace RestApi.DataTypes
         [DisplayName("Completion Code")]
         public int completionCode { get; set; }
         [DisplayName("Transaction Link")]
-        public int transactionLink { get; set; }
+        public long transactionLink { get; set; }
         [DisplayName("Order Link")]
-        public int orderLink { get; set; }
+        public long orderLink { get; set; }
         [DisplayName("Diaspora")]
-        public int diaspora { get; set; }
+        public long diaspora { get; set; }
         [DisplayName("Trailing Stop")]
         public int trailingStop { get; set; }
         [DisplayName("Margin Used")]
